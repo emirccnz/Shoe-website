@@ -8,6 +8,14 @@ const reviewImg = document.getElementsByClassName("reviewImg")
 const reviewImgDiv = document.getElementsByClassName("imgDiv")
 const getShoeImgDiv = document.getElementsByClassName("pcsimgDiv")
 const getFollowBoxDiv = document.getElementsByClassName("followBox")
+const getHomeAEl = document.getElementsById("homeA")
+const getHomeAEl = document.getElementsById("productsA")
+const getHomeAEl = document.getElementsById("aboutA")
+const getHomeAEl = document.getElementsById("reviewA")
+const getHomeAEl = document.getElementsById("servicesA")
+
+
+
 let checker = undefined;
 window.addEventListener("load",()=>{
     fixLeftSideHeight()
@@ -57,7 +65,9 @@ function events(){
             getWAPicHuge.setAttribute("src",thisPicSrc)
         })
     })
-    
+    homeA.addEventListener("click",()=>{
+        
+    })
 }
 
 
