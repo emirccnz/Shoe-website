@@ -13,11 +13,11 @@ const getProductsAEl = document.getElementsById("productsA")
 const getAboutAEl = document.getElementsById("aboutA")
 const getReviewAEl = document.getElementsById("reviewA")
 const getServicesAEl = document.getElementsById("servicesA")
-const getHomeH1 = document.getElementsById("h1Home")
-const getProductsH1 = document.getElementsById("h1Products")
-const getAboutH1 = document.getElementsById("h1WebAbout")
-const getHomeH1 = document.getElementsById("h1review")
-const getHomeH1 = document.getElementsById("h1Services")
+const getHomeH1 = document.getElementsById("hHome")
+const getProductsH1 = document.getElementsById("hProducts")
+const getAboutH1 = document.getElementsById("hWebAbout")
+const getReviewH1 = document.getElementsById("hReview")
+const getServicesH1 = document.getElementsById("hServices")
 
 
 let checker = undefined;
@@ -69,8 +69,20 @@ function events(){
             getWAPicHuge.setAttribute("src",thisPicSrc)
         })
     })
-    homeA.addEventListener("click",()=>{
-        
+    getHomeAEl.addEventListener("click",()=>{
+        getHomeH1.scrollIntoView({behavior:"smooth"})
+    })
+    getProductsAEl.addEventListener("click",()=>{
+        getProductsH1.scrollIntoView({behavior:"smooth"})
+    })
+    getAboutAEl.addEventListener("click",()=>{
+        getAboutH1.scrollIntoView({behavior:"smooth"})
+    })
+    getReviewAEl.addEventListener("click",()=>{
+        getReviewH1.scrollIntoView({behavior:"smooth"})
+    })
+    getServicesAEl.addEventListener("click",()=>{
+        getServicesH1.scrollIntoView({behavior:"smooth"})
     })
 }
 
