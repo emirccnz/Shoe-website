@@ -9,7 +9,10 @@ const reviewImgDiv = document.getElementsByClassName("imgDiv")
 const getShoeImgDiv = document.getElementsByClassName("pcsimgDiv")
 const getFollowBoxDiv = document.getElementsByClassName("followBox")
 let checker = undefined;
-
+window.addEventListener("load",()=>{
+    fixLeftSideHeight()
+})
+                        
 events()
 
 function events(){
@@ -23,7 +26,6 @@ function events(){
     window.addEventListener("resize",()=>{
             fixLeftSideHeight()
         })
-    window.addEventListener("load",fixLeftSideHeight())
 
     Array.from(reviewImgDiv).forEach((imgDiv)=>{
         imgDiv.addEventListener("mouseover",()=>{
