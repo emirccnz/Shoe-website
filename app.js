@@ -9,11 +9,15 @@ const reviewImgDiv = document.getElementsByClassName("imgDiv")
 const getShoeImgDiv = document.getElementsByClassName("pcsimgDiv")
 const getFollowBoxDiv = document.getElementsByClassName("followBox")
 const getHomeAEl = document.getElementsById("homeA")
-const getHomeAEl = document.getElementsById("productsA")
-const getHomeAEl = document.getElementsById("aboutA")
-const getHomeAEl = document.getElementsById("reviewA")
-const getHomeAEl = document.getElementsById("servicesA")
-
+const getProductsAEl = document.getElementsById("productsA")
+const getAboutAEl = document.getElementsById("aboutA")
+const getReviewAEl = document.getElementsById("reviewA")
+const getServicesAEl = document.getElementsById("servicesA")
+const getHomeH1 = document.getElementsById("h1Home")
+const getProductsH1 = document.getElementsById("h1Products")
+const getAboutH1 = document.getElementsById("h1WebAbout")
+const getHomeH1 = document.getElementsById("h1review")
+const getHomeH1 = document.getElementsById("h1Services")
 
 
 let checker = undefined;
