@@ -8,26 +8,29 @@ const reviewImg = document.getElementsByClassName("reviewImg")
 const reviewImgDiv = document.getElementsByClassName("imgDiv")
 const getShoeImgDiv = document.getElementsByClassName("pcsimgDiv")
 const getFollowBoxDiv = document.getElementsByClassName("followBox")
-const getHomeAEl = document.getElementsById("homeA")
-const getProductsAEl = document.getElementsById("productsA")
-const getAboutAEl = document.getElementsById("aboutA")
-const getReviewAEl = document.getElementsById("reviewA")
-const getServicesAEl = document.getElementsById("servicesA")
-const getHomeH1 = document.getElementsById("hHome")
-const getProductsH1 = document.getElementsById("hProducts")
-const getAboutH1 = document.getElementsById("hWebAbout")
-const getReviewH1 = document.getElementsById("hReview")
-const getServicesH1 = document.getElementsById("hServices")
+
+const aElements = {
+    home:document.getElementById("aHome"),
+    products:document.getElementById("aProducts"),
+    about:document.getElementById("aAbout"),
+    review:document.getElementById("aReview"),
+    services:document.getElementById("aServices")
+}
+
+const hElements = {
+    hProducts:document.getElementById("hProducts"),
+    hAbout:document.getElementById("hAbout"),
+    hReview:document.getElementById("hReview"),
+    hServices:document.getElementById("hServices"),
+}
+
 
 
 let checker = undefined;
-window.addEventListener("load",()=>{
-    fixLeftSideHeight()
-})
-                        
+
 events()
 
-function events(){
+function events(e){
     getShopNowButton.addEventListener("mouseover",()=>{
         moveIEl()
     })
@@ -38,6 +41,7 @@ function events(){
     window.addEventListener("resize",()=>{
             fixLeftSideHeight()
         })
+    window.addEventListener("load",fixLeftSideHeight())
 
     Array.from(reviewImgDiv).forEach((imgDiv)=>{
         imgDiv.addEventListener("mouseover",()=>{
@@ -69,20 +73,27 @@ function events(){
             getWAPicHuge.setAttribute("src",thisPicSrc)
         })
     })
-    getHomeAEl.addEventListener("click",()=>{
-        getHomeH1.scrollIntoView({behavior:"smooth"})
+    
+    aElements.home.addEventListener("click",(e)=>{
+        window.scrollTo = "0"
+        
     })
-    getProductsAEl.addEventListener("click",()=>{
-        getProductsH1.scrollIntoView({behavior:"smooth"})
+    
+    aElements.products.addEventListener("click",(e)=>{
+        hElements.hProducts.scrollIntoView()
+        e.preventDefault()
     })
-    getAboutAEl.addEventListener("click",()=>{
-        getAboutH1.scrollIntoView({behavior:"smooth"})
+    aElements.about.addEventListener("click",(e)=>{
+        hElements.hAbout.scrollIntoView()
+        e.preventDefault()
     })
-    getReviewAEl.addEventListener("click",()=>{
-        getReviewH1.scrollIntoView({behavior:"smooth"})
+    aElements.review.addEventListener("click",(e)=>{
+        hElements.hReview.scrollIntoView()
+        e.preventDefault()
     })
-    getServicesAEl.addEventListener("click",()=>{
-        getServicesH1.scrollIntoView({behavior:"smooth"})
+    aElements.services.addEventListener("click",(e)=>{
+        hElements.hServices.scrollIntoView()
+        e.preventDefault()
     })
 }
 
